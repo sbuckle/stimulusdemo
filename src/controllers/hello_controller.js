@@ -1,10 +1,10 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "name" ]
+  static targets = [ "name", "output" ]
 
   greet() {
-    console.log(`Hello, ${this.name}!`)
+    this.outputTarget.textContent = `Hello, ${this.name}!`
   }
 
   get name() {
